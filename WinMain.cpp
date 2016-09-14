@@ -7,6 +7,12 @@
 #ifndef _IOSTREAM_H
 #include "iostream.h"
 #endif
+#ifndef _DELETEMACROS_H
+#include "deletemacros.h"
+#endif
+#ifndef _ENGINE_H
+#include "Engine.h"
+#endif
 
 #if defined (DEBUG) | defined (_DEBUG)
 int _tmain(int argc, char* argv[])
@@ -14,7 +20,7 @@ int _tmain(int argc, char* argv[])
 	UNREFERENCED_PARAMETER(argc);
 	UNREFERENCED_PARAMETER(argv);
 
-	// Logger::Log("Starting Engine");
+	//Logger::Info("Starting Engine");
 
 	// Run WinMain Function
 	WinMain((HINSTANCE)GetModuleHandle(NULL), 0, 0, SW_SHOW);
@@ -36,16 +42,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	//_CrtSetBreakAlloc(0);
 #endif
 
-	//// Create Engine
-	////Engine* pEngine = new Engine();
+	// Create Engine
+	Engine* pEngine = new Engine();
 
-	//// Run Game
-	////int result = pEngine->RunLoop();
+	// Run Game
+	int result = pEngine->RunLoop();
 
-	//// Delete Engine
-	////delete(pEngine);
+	// Delete Engine
+	SafeDelete(pEngine);
 
-	////return result;
-
-	return 0;
+	return result;
 }

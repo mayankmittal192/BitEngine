@@ -22,10 +22,34 @@
     <Filter Include="Header Files\Defines">
       <UniqueIdentifier>{988c3669-124b-466f-a1d0-f01cfc0ecaca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Core\Systems">
+      <UniqueIdentifier>{8af85374-7325-4f6b-9f04-12b04f570217}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SceneGraph">
+      <UniqueIdentifier>{2eace384-ee48-411a-8d2b-68a83c20d1eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SceneGraph\Base">
+      <UniqueIdentifier>{52601555-9d2a-444e-accc-760bad25ce88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Defines\Context">
+      <UniqueIdentifier>{691345fc-ec7d-4143-9f0e-7d74a833f04b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
       <Filter>Header Files\Core\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -37,6 +61,24 @@
     </ClInclude>
     <ClInclude Include="iostream.h">
       <Filter>Header Files\Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deletemacros.h">
+      <Filter>Header Files\Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="UObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="context.h">
+      <Filter>Header Files\Defines\Context</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
