@@ -7,9 +7,7 @@
 
 // Game Data Structure
 struct GameData : public SystemData
-{
-
-};
+{};
 
 class Game : public System
 {
@@ -18,4 +16,4 @@ public:
 	virtual ~Game();
 };
 
-#endif
+#endif	// _GAME_H

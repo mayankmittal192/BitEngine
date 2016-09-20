@@ -34,22 +34,28 @@
     <Filter Include="Header Files\Defines\Context">
       <UniqueIdentifier>{691345fc-ec7d-4143-9f0e-7d74a833f04b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Core\Systems\Base">
+      <UniqueIdentifier>{f0fe8676-0ac6-4705-8003-94dcfc226548}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
       <Filter>Header Files\Core\Main</Filter>
     </ClCompile>
-    <ClCompile Include="Engine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="UObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="System.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files\Core\Systems\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Header Files\Core</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files\Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="UObject.cpp">
+      <Filter>Header Files\SceneGraph\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Header Files\Core\Systems</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -62,23 +68,26 @@
     <ClInclude Include="iostream.h">
       <Filter>Header Files\Defines</Filter>
     </ClInclude>
-    <ClInclude Include="Engine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="deletemacros.h">
       <Filter>Header Files\Defines</Filter>
     </ClInclude>
-    <ClInclude Include="UObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="System.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="context.h">
       <Filter>Header Files\Defines\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>Header Files\Core\Systems\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="UObject.h">
+      <Filter>Header Files\SceneGraph\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Header Files\Core\Systems</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

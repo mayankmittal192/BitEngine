@@ -1,10 +1,18 @@
-#ifndef _CONTEXT_h
-#define _CONTEXT_h
+#ifndef _CONTEXT_H
+#define _CONTEXT_H
+
+// Forward Declarations
+class Window;
+
+// Defines
+#define WINDOW context.pWnd
 
 // Context Structure
 struct Context
 {
 	float dTime;
+
+	Window* pWnd;
 };
 
-#endif
+#endif	// _CONTEXT_H

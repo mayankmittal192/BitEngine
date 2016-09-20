@@ -1,10 +1,9 @@
 #include "Game.h"
 
 
+// Constructor & Destructor
 Game::Game(const GameData& data)
-{
-	m_SystemType = SystemType::Sys_Game;
-}
+	: System(SystemType::Sys_Game)
+{}
 Game::~Game()
-{
-}
+{}

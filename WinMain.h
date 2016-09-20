@@ -2,7 +2,7 @@
 #define _WINMAIN_H
 
 // C Runtime Header Files
-#ifndef _WINDOW_
+#ifndef _WINDOWS_
 #include <Windows.h>
 #endif
 

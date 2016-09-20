@@ -5,4 +5,4 @@
 #define SafeRelease(x) { if(x) { x->Release(); x = nullptr; } }		// Macro For Releasing COM Objects
 #define SafeDelete(x) { if(x) { delete x; x = nullptr; } }			// Macro For Deleting Objects
 
-#endif
+#endif	// _DELETEMACROS_H

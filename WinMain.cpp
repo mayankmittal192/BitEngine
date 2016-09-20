@@ -14,6 +14,8 @@
 #include "Engine.h"
 #endif
 
+
+// Window Initialization Methods
 #if defined (DEBUG) | defined (_DEBUG)
 int _tmain(int argc, char* argv[])
 {
@@ -26,7 +28,6 @@ int _tmain(int argc, char* argv[])
 	WinMain((HINSTANCE)GetModuleHandle(NULL), 0, 0, SW_SHOW);
 }
 #endif
-
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	UNREFERENCED_PARAMETER(hInstance);
