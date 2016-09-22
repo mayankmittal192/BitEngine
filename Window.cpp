@@ -64,6 +64,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		if (pWindow)
 			return pWindow->HandleEvent(hWnd, msg, wParam, lParam);
 	}
+
+	return DefWindowProc(hWnd, msg, wParam, lParam);
 }
 LRESULT Window::HandleEvent(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
@@ -75,7 +77,7 @@ LRESULT Window::HandleEvent(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 				this->Activate();
 			else
 				this->DeActivate();
-			return 0;
+			break;
 		}
 
 		case WM_SIZE:
@@ -85,23 +87,28 @@ LRESULT Window::HandleEvent(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 			m_ResizeData.mustResize = true;
 			m_ResizeData.newWidth = width;
 			m_ResizeData.newHeight = height;
-			return 0;
+			break;
 		}
 
 		case WM_DISPLAYCHANGE:
 		{
 			InvalidateRect(hWnd, NULL, false);
-			return 0;
+			break;
 		}
 
 		case WM_CLOSE:
 		{
 			PostQuitMessage(0);
-			return 0;
+			break;
+		}
+
+		default:
+		{
+			return DefWindowProc(hWnd, msg, wParam, lParam);
 		}
 	}
 
-	return DefWindowProc(hWnd, msg, wParam, lParam);
+	return 0;
 }
 
 // Private Methods
@@ -171,13 +178,13 @@ bool Window::Initialize()
 	}
 	else
 	{
-		dwExStyle = WS_EX_APPWINDOW | WS_EX_WINDOWEDGE;		// window extended style
-		dwStyle = WS_OVERLAPPEDWINDOW;						// window style
+		dwExStyle = WS_EX_APPWINDOW | WS_EX_WINDOWEDGE;			// window extended style
+		dwStyle = WS_OVERLAPPEDWINDOW;							// window style
 	}
 
 	AdjustWindowRectEx(&wndRect, dwStyle, FALSE, dwExStyle);	// adjust window to true requested size
 
-	/*if (!(m_hWindow = CreateWindowEx(
+	if (!(m_hWindow = CreateWindowEx(
 		dwExStyle, className.c_str(), className.c_str(),
 		dwStyle | WS_CLIPSIBLINGS | WS_CLIPCHILDREN, 0, 0,
 		wndRect.right - wndRect.left,	// calculate window width
@@ -185,8 +192,8 @@ bool Window::Initialize()
 		NULL, NULL, m_hInst, this)))
 	{
 		//Logger::Log(_T("Failed To Create Window Handle"), LOGTYPE_ERROR, true);
-		//return false;
-	}*/
+		return false;
+	}
 
 	static PIXELFORMATDESCRIPTOR pfd =				// pfd tells window how we want things to be
 	{

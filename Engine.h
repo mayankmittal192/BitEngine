@@ -36,18 +36,15 @@ public:
 	Engine();
 	~Engine();
 
-	//void* operator new(size_t size);
-	//void operator delete(void* pDelete);
-
+	// Methods
 	// Game Engine Loop
 	int RunLoop();
 
+	// Memebers
 	static EngineState GetEngineState() { return m_EngineState; }
 
 private:
-	static EngineState m_EngineState;
-	std::map<SystemType, System*> m_mapSystems;
-
+	// Methods
 	// Implement Basic Functionalities
 	int Initialize();
 	int Update(Context& context);
@@ -70,6 +67,10 @@ private:
 		}
 	}
 	Game* CreateGame();				// create game instance
+
+	// Members
+	static EngineState m_EngineState;
+	std::map<SystemType, System*> m_mapSystems;
 };
 
 #endif	// _ENGINE_H

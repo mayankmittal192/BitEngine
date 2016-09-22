@@ -46,12 +46,12 @@ class Window : public System
 	friend class Engine;
 
 public:
-	int GetWidth() const { return m_Width; }
-	int GetHeight() const { return m_Height; }
+	int GetWidth();
+	int GetHeight();
 
-	HWND GetWindowHandle() const { return m_hWindow; }
-	HDC GetDeviceContext() const { return m_hDC; }
-	HINSTANCE GetInstance() const { return m_hInst; }
+	HWND GetWindowHandle();
+	HDC GetDeviceContext();
+	HINSTANCE GetInstance();
 	
 	ResizeData& GetResizeData() { return m_ResizeData; }
 	
@@ -62,9 +62,6 @@ protected:
 	// Constructor & Destructor
 	Window(const WindowData& data);
 	virtual ~Window(void);
-	// Copy Constructor & Assignment Operator
-	/*Window(const Window& tref);
-	Window& operator=(const Window& tref);*/
 
 	// Overridable Methods
 	virtual bool Initialize();
@@ -73,9 +70,6 @@ protected:
 
 private:
 	// Methods
-	/*void* operator new(size_t size);
-	void operator delete(void* pdelete);*/
-	
 	bool centerWindow();
 
 	// Members

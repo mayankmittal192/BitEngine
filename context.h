@@ -5,7 +5,7 @@
 class Window;
 
 // Defines
-#define WINDOW context.pWnd
+#define WINDOW (context.pWnd)
 
 // Context Structure
 struct Context
