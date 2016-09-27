@@ -72,7 +72,7 @@
     <ClInclude Include="Engine/Defines/iostream.h" />
     <ClInclude Include="Engine/Defines/string.h" />
     <ClInclude Include="Engine/Core/Systems/Base/System.h" />
-    <ClInclude Include="Engine/Scene Graph/Base/UObject.h" />
+    <ClInclude Include="Engine/SceneGraph/Base/UObject.h" />
     <ClInclude Include="Engine/Core/Systems/Window.h" />
     <ClInclude Include="Engine/Core/Main/WinMain.h" />
   </ItemGroup>
@@ -80,7 +80,7 @@
     <ClCompile Include="Engine/Core/Engine.cpp" />
     <ClCompile Include="Engine/Core/Systems/Game.cpp" />
     <ClCompile Include="Engine/Core/Systems/Base/System.cpp" />
-    <ClCompile Include="Engine/Scene Graph/Base/UObject.cpp" />
+    <ClCompile Include="Engine/SceneGraph/Base/UObject.cpp" />
     <ClCompile Include="Engine/Core/Systems/Window.cpp" />
     <ClCompile Include="Engine/Core/Main/WinMain.cpp" />
   </ItemGroup>

@@ -2,7 +2,7 @@
 #define _SYSTEM_H
 
 #ifndef _UBOJECT_H
-#include "../../../Scene Graph/Base/UObject.h"
+#include "../../../SceneGraph/Base/UObject.h"
 #endif
 
 // Addtional Include Files

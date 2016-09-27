@@ -51,11 +51,11 @@
     <ClCompile Include="Engine/Core/Systems/Game.cpp">
       <Filter>Header Files\Core\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="Engine/Scene Graph/Base/UObject.cpp">
-      <Filter>Header Files\SceneGraph\Base</Filter>
-    </ClCompile>
     <ClCompile Include="Engine/Core/Systems/Base/System.cpp">
       <Filter>Header Files\Core\Systems\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine/SceneGraph/Base/UObject.cpp">
+      <Filter>Header Files\SceneGraph\Base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,7 +86,7 @@
     <ClInclude Include="Engine/Defines/string.h">
       <Filter>Header Files\Defines</Filter>
     </ClInclude>
-    <ClInclude Include="Engine/Scene Graph/Base/UObject.h">
+    <ClInclude Include="Engine/SceneGraph/Base/UObject.h">
       <Filter>Header Files\SceneGraph\Base</Filter>
     </ClInclude>
   </ItemGroup>
