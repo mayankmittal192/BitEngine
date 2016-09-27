@@ -2,7 +2,7 @@
 #define _WINDOW_H
 
 #ifndef _SYSTEM_H
-#include "System.h"
+#include "Base/System.h"
 #endif
 
 // C Runtime Header Files
@@ -12,10 +12,10 @@
 
 // Additional Include Files
 #ifndef _CONTEXT_H
-#include "context.h"
+#include "../../Defines/Context/context.h"
 #endif
 #ifndef _STRING_H
-#include "string.h"
+#include "../../Defines/string.h"
 #endif
 
 // Window Data Structure

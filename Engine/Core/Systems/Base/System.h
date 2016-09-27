@@ -2,12 +2,12 @@
 #define _SYSTEM_H
 
 #ifndef _UBOJECT_H
-#include "UObject.h"
+#include "../../../Scene Graph/Base/UObject.h"
 #endif
 
 // Addtional Include Files
 #ifndef _CONTEXT_H
-#include "context.h"
+#include "../../../Defines/Context/context.h"
 #endif
 
 // System Type Enumeration

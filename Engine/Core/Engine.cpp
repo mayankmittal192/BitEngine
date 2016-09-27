@@ -2,19 +2,19 @@
 
 // Additional Include Files
 #ifndef _STRING_H
-#include "string.h"
+#include "../Defines/string.h"
 #endif
 #ifndef _DELETEMACROS_H
-#include "deletemacros.h"
+#include "../Defines/deletemacros.h"
 #endif
 #ifndef _SYSTEM_H
-#include "System.h"
+#include "Systems\Base\System.h"
 #endif
 #ifndef _GAME_H
-#include "Game.h"
+#include "Systems\Game.h"
 #endif
 #ifndef _WINDOW_H
-#include "Window.h"
+#include "Systems/Window.h"
 #endif
 
 
