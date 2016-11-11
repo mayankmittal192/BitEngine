@@ -8,10 +8,10 @@
 #include "../Defines/deletemacros.h"
 #endif
 #ifndef _SYSTEM_H
-#include "Systems\Base\System.h"
+#include "Systems/Base/System.h"
 #endif
 #ifndef _GAME_H
-#include "Systems\Game.h"
+#include "Systems/Game.h"
 #endif
 #ifndef _WINDOW_H
 #include "Systems/Window.h"
